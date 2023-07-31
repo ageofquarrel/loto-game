@@ -39,8 +39,8 @@ class LotoRepository
     {
         try {
             return  [
-                        'gameInfo'  => Loto::where('game_id', $gameId)->get(),
-                        'sum'       => Loto::where('game_id', $gameId)->sum('bid')
+                        'gameInfo'         => Loto::where('game_id', $gameId)->get(),
+                        'totalPrice'       => Loto::where('game_id', $gameId)->sum('bid')
                     ];
         } catch (QueryException $exception) {
             throw new QueryException($exception->getMessage(), $exception->getCode());
