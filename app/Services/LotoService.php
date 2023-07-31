@@ -40,7 +40,7 @@ class LotoService extends Service
     public function receive(Request $request, int $gameId): array|Exception
     {
         try {
-            $game = $lotoService->receive($gameId);
+            $game = $lotoRepository->receive($gameId);
 
             return [
                 'gameInfo'      => new LotoResource($game['gameInfo']),
