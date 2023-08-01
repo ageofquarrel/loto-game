@@ -10,7 +10,7 @@ use Illuminate\Http\Response;
 use Exception;
 use Illuminate\Database\QueryException;
 
-class LotoController exetends Controller
+class LotoController extends Controller
 {
     public function __construct(
         private LotoService $lotoService
